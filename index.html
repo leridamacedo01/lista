@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes da Lérida 🎂</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones modernos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="profile-badge">🎁 01 de Janeiro</div>
+            <h1>Lista de Presentes de Aniversário</h1>
+            <p class="subtitle">Minha época favorita do ano chegou! E já que sou a amiguinha e blogueira favorita de vocês, fiz essa lista de presente pra vcs me darem kkkkkk. Amaram a ideia?</p>
+        </div>
+    </header>
+
+            <!-- Botão para abrir a página de Informações/Sobre -->
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+            <a href="sobre.html" class="filter-btn active" style="text-decoration: none; display: inline-block; background-color: #ff3399; border-color: #ff3399; color: white;">
+                <i class="fa-solid fa-circle-info"></i> (Informações Importantes!)
+            </a>
+        </div>
+
+    <main class="container">
+        
+        <!-- Filtros Rápidos -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterCategory('todos')">Todos</button>
+            <button class="filter-btn" onclick="filterCategory('mimos')">Mimos & Doces</button>
+            <button class="filter-btn" onclick="filterCategory('objetos')">Coisas que eu gosto</button>
+            <button class="filter-btn" onclick="filterCategory('moda')">Moda & Acessórios</button>
+            <button class="filter-btn" onclick="filterCategory('outros')">Outros</button>
+        </div>
+
+        <!-- Grid de Presentes -->
+        <section class="gift-grid" id="gift-grid">
+            <!-- Os itens serão gerados automaticamente pelo JavaScript -->
+        </section>
+
+        <!-- Link de Inspirações -->
+        <section class="inspiration-section">
+            <h3>✨ Inspirações de Presentes</h3>
+            <p>Clique abaixo para ver a pasta que criei com fotos do meu estilo atual:</p>
+            <a href="inspiracoes.html" target="_blank" class="pinterest-btn">
+                <i class="fa-brands fa-pinterest"></i> Ver meu painel de inspirações
+                
+            </a>
+        </section>
+
+         <!-- Seção do PIX (Opcional, mas faz muito sucesso) -->
+        <section class="pix-section">
+            <h3><i class="fa-solid fa-heart-count"></i> Prefere mandar um PIX?</h3>
+            <p>Se você estiver em dúvida sobre o presente (mesmo sabendo q eu gosto de tudo) e preferir enviar um pix pra eu escolher meu presente depois, vou amar tbm💕</p>
+            <div class="pix-box">
+                <span class="pix-key">🔑 Chave PIX: <strong>087.280.671-50</strong></span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Lérida Macedo💖</p>
+    </footer>
+
+    <!-- Lógica do Site -->
+    <script src="script.js"></script>
+</body>
+</html>
