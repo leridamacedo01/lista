@@ -1,11 +1,12 @@
 @import url('https://googleapis.com');
 
 :root {
-    --primary-color: #ff66b2; /* Rosa Principal */
-    --secondary-color: #ff3399; /* Rosa Escuro */
-    --light-pink: #fff0f5; /* Rosa bem clarinho para fundos */
-    --text-color: #4a4a4a;
-    --card-shadow: 0 10px 20px rgba(255, 102, 178, 0.15);
+    --primary-color: #720917; /* Vermelho Bordô Elegante */
+    --secondary-color: #4a030b; /* Vermelho Escuro de Fundo */
+    --gold-color: #e5c158; /* Detalhes em Dourado */
+    --light-bg: #fcf8f8; /* Fundo suave levemente aquecido */
+    --text-color: #2d2d2d;
+    --card-shadow: 0 10px 25px rgba(74, 3, 11, 0.08);
 }
 
 * {
@@ -16,20 +17,20 @@
 }
 
 body {
-    background-color: #fafafa;
+    background-color: oklab(72.67% 0.15645 0.0637 / 0.466);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Header */
+/* Header Adaptado para as Cores do Convite */
 .header {
-    background: linear-gradient(135deg, #ff99cc 0%, var(--primary-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     padding: 60px 20px;
     text-align: center;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .header-content {
@@ -38,7 +39,9 @@ body {
 }
 
 .profile-badge {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(229, 193, 88, 0.2);
+    color: var(--gold-color);
+    border: 1px solid rgba(229, 193, 88, 0.4);
     display: inline-block;
     padding: 6px 15px;
     border-radius: 20px;
@@ -48,12 +51,15 @@ body {
 }
 
 .header h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 5px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .header h2 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 300;
     opacity: 0.9;
@@ -63,6 +69,7 @@ body {
 .subtitle {
     font-size: 1.1rem;
     font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Container */
@@ -72,7 +79,7 @@ body {
     padding: 0 20px;
 }
 
-/* Filtros */
+/* Filtros e Botão de Voltar */
 .filters {
     display: flex;
     justify-content: center;
@@ -83,7 +90,7 @@ body {
 
 .filter-btn {
     background: white;
-    border: 2px solid var(--light-pink);
+    border: 2px solid rgba(114, 9, 23, 0.1);
     padding: 10px 20px;
     border-radius: 25px;
     cursor: pointer;
@@ -96,6 +103,7 @@ body {
     background: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(114, 9, 23, 0.2);
 }
 
 /* Grid de Presentes */
@@ -112,21 +120,22 @@ body {
     padding: 25px;
     text-align: center;
     box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    border: 1px solid #ffe6f2;
+    border: 1px solid rgba(114, 9, 23, 0.05);
 }
 
 .gift-card:hover {
     transform: translateY(-5px);
+    border-color: rgba(229, 193, 88, 0.4);
 }
 
 .gift-icon {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: var(--gold-color);
     margin-bottom: 15px;
 }
 
@@ -138,10 +147,11 @@ body {
 
 .gift-desc {
     font-size: 0.9rem;
-    color: #888;
+    color: #666;
     margin-bottom: 20px;
 }
 
+/* Botões de Ação Dinâmicos */
 .reserve-btn {
     background: var(--primary-color);
     color: white;
@@ -151,11 +161,15 @@ body {
     font-weight: 600;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .reserve-btn:hover {
     background: var(--secondary-color);
+}
+
+.reserve-btn:active {
+    transform: scale(0.98);
 }
 
 .reserve-btn.reserved {
@@ -164,7 +178,7 @@ body {
     cursor: not-allowed;
 }
 
-/* Pix e Inspiração */
+/* Seções Extras: Pix e Inspiração */
 .pix-section, .inspiration-section {
     background: white;
     border-radius: 20px;
@@ -172,15 +186,17 @@ body {
     text-align: center;
     box-shadow: var(--card-shadow);
     margin-top: 40px;
+    border: 1px solid rgba(114, 9, 23, 0.05);
 }
 
 .pix-box {
-    background: var(--light-pink);
+    background: #fff8f8;
     padding: 15px;
     border-radius: 12px;
     display: inline-block;
     margin-top: 15px;
     border: 1px dashed var(--primary-color);
+    font-weight: 600;
 }
 
 .pinterest-btn {
@@ -211,7 +227,7 @@ footer {
     .header h2 { font-size: 1.4rem; }
 }
 
-/* Estilos para a Galeria de Fotos de Inspiração */
+/* Elementos da Galeria */
 .gallery-img-container {
     width: 100%;
     height: 250px;
