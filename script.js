@@ -6,7 +6,7 @@ const presents = [
     { id: 4, title: "Garrafa Stanley ou Caneca Personalizada", desc: "Eu amoooo", icon: "🥤", category: "mimos" },
     { id: 5, title: "Chocolates e Ursinhos de pelúcia", desc: "Sou viciada em chocolate e acho os ursinhos fofinhos demaisss", icon: "🍫🧸", category: "mimos" },
     { id: 6, title: "Roupas e looks novos", desc: "Sempre bom renovar o guarda-roupa.", icon: "👗", category: "moda" },
-    { id: 7, title: "Bola de Vôlei", desc: "Para treinar e jogar com meus amiguinhos.", icon: "🏐", category: "objetos" }
+    { id: 7, title: "Coisas de Vôlei ou de gravação", desc: "Bola pra brincar com meus amiguinhos e trem pra mim gravar? eu amo dms.", icon: "🏐", category: "objetos" }
 ];
 
 // Carregar itens na tela
